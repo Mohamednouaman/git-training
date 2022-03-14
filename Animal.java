@@ -6,8 +6,19 @@ public class Animal{
     
           return "Hello";
     } 
+    public static String getBirdGreeting(){
+
+        return "Tweet";
+    }
     public static void main(String[] args){
-         System.out.println(getDefaultGreeting());
+
+        String firstArgument=args[0];
+        String output="";
+        if(firstArgument.equalsIgnoreCase("bird")){
+            output=getBirdGreeting();
+        }
+        else output=getDefaultGreeting();
+         System.out.println(output);
     }
     
     }
