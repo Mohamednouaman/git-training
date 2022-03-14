@@ -23,17 +23,16 @@
 </target>
 
 <target name="compress"  depends="compile">
-   <jar destfile="${build}/Project.jar" basedir="${target}" includes="*.class">
+   <jar destfile="${build}/Animal.jar" basedir="${target}" includes="*.class">
    <manifest>
-      <attribute name="Main-class" value="Project"/>
-   
+      <attribute name="Main-class" value="Animal"/>
    </manifest>
    
    </jar>
 </target>
 
 <target name="run" depends="compress">
-   <java jar="${build}/Project.jar" fork="true"/>
+   <java jar="${build}/Animal.jar" fork="true"/>
 </target>
 
 
